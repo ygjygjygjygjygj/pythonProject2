@@ -1,16 +1,9 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('zccssb!!!!')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+import pandas as pd
+import numpy as np
+data = pd.read_csv('D:\\xzDate\\data\\.ipynb_checkpoints\\train-checkpoint.csv', dtype={48: str, 51: str, 52: str})
+data.head() # 查看前几行数据
+data.describe() # 查看数据的统计信息
+data.fillna(0, inplace=True)
+data.drop_duplicates(inplace=True)
+data = data.apply(lambda x: x * 2)
+data.to_csv('D:\\xzDate\\cleaned_data.csv', index=False)
