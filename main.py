@@ -6,4 +6,4 @@ data.describe() # 查看数据的统计信息
 data.fillna(0, inplace=True)
 data.drop_duplicates(inplace=True)
 data = data.apply(lambda x: x * 2)
-data.to_csv('D:\\xzDate\\data\\cleaned_data.csv', index=False)
+    data.to_csv('D:\\xzDate\\data\\cleaned_data.csv', index=False)
